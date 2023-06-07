@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+  
+    <script>
+        const container = document.querySelector("#container");
+
+        const para = document.createElement("p");
+        para.setAttribute('style', 'color:red;');
+        para.textContent = "Hey I'm red!";
+        container.appendChild(para);
+
+        const head3 = document.createElement("h3");
+        head3.setAttribute('style', 'color:blue;');
+        head3.textContent = "I'm blue h3!";
+        container.appendChild(head3);
+
+        const nest = document.createElement("div");
+        nest.setAttribute('style','background:pink; border:2px solid black');
+
+        const head1 = document.createElement("h1");
+        head1.textContent = "I'm in a div";
+        nest.appendChild(head1);
+
+        const para2 = document.createElement("p");
+        para2.textContent = "ME TOO!";
+        nest.appendChild(para2);
+
+        container.appendChild(nest);
+    </script>
+</body>
+</html>
